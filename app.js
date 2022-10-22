@@ -1,5 +1,9 @@
+const path = require("path")
+require("dotenv").config({ path: path.resolve(__dirname, "config", ".env") });
 const express = require('express')
 const app = express()
+
+const connectDB = require("./config/db");
 
 const userRoutes = require('./routes/user')
 const productRoutes = require('./routes/product')
@@ -11,6 +15,7 @@ app.use('/app', sectionsRoutes)
 
 const port = 4500
 
-app.listen(4500, ()=>{
+app.listen(port, ()=>{
     console.log(`App stared successfully on ${port}`);
+    connectDB()
 })
