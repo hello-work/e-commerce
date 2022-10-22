@@ -3,7 +3,7 @@ const app = express()
 
 const userRoutes = require('./routes/user')
 const productRoutes = require('./routes/product')
-
+// here is the routes for the application
 app.use('/app', userRoutes)
 app.use('/app', productRoutes)
 
