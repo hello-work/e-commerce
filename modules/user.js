@@ -1,4 +1,5 @@
-TODO : import db modules
+// TODO : import db modules
+exports.login = async(req,res)=>{
     const {email, password} = req.body
 
     // TODO : database call
