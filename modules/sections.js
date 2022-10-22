@@ -14,7 +14,7 @@ exports.getSections = async(req,res)=>{
         res.status(200).send({msg:'Successful',  data:sections})
         
     }catch (err) {
-        res.status(500).send({msg:'Internal Server Error',  err : err.msg})     
+        res.status(500).send({msg:'Internal Server Error',  err : err.message})     
     }
    
 }
@@ -37,7 +37,7 @@ exports.addSections = async(req,res)=>{
         res.status(200).send({msg:'Successful',  data:section})
         
     }catch (err) {
-        res.status(500).send({msg:'Internal Server Error',  err : err.msg})     
+        res.status(500).send({msg:'Internal Server Error',  err : err.message})     
     }
     
 }
@@ -58,7 +58,7 @@ exports.getSection = async(req,res)=>{
         res.status(200).send({msg:'Successful',  data:section})
         
     }catch (err) {
-        res.status(500).send({msg:'Internal Server Error',  err : err.msg})     
+        res.status(500).send({msg:'Internal Server Error',  err : err.message})     
     }
 
 }
@@ -76,7 +76,7 @@ exports.updateSection = async(req,res)=>{
         res.status(200).send({msg:'Successful',  data:section})
         
     }catch (err) {
-        res.status(400).send({msg:'Unsuccessful',  err : err.msg})     
+        res.status(400).send({msg:'Unsuccessful',  err : err.message})     
     }
 }
 
@@ -92,7 +92,7 @@ exports.deleteSection = async(req,res)=>{
         res.status(200).send({msg:'Successful'})
         
     }catch (err) {
-        res.status(400).send({msg:'Unsuccessful',  err : err.msg})     
+        res.status(400).send({msg:'Unsuccessful',  err : err.message})     
     }
 
 }
