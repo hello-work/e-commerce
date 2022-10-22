@@ -1,5 +1,10 @@
 const express = require('express')
 const app = express()
+const userRoutes = require('./routes/user')
+const productRoutes = require('./routes/product')
+
+app.use('/app', userRoutes)
+app.use('/app', productRoutes)
 
 const port = 4500
 
