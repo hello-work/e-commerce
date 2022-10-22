@@ -1,0 +1,23 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thilina4321/e-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thilina4321/e-commerce/issues"
+  },
+  "homepage": "https://github.com/thilina4321/e-commerce#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
