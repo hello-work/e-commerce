@@ -3,7 +3,9 @@ require("dotenv").config({ path: path.resolve(__dirname, "config", ".env") });
 const express = require('express')
 const app = express()
 
-const connectDB = require("./config/db");
+app.use(express.json());
+
+const connectDB = require("./configs/db");
 
 const userRoutes = require('./routes/user')
 const productRoutes = require('./routes/product')
