@@ -1,6 +1,6 @@
 const express = require('express')
 const routes = express.Router()
-const {getSections, getSection, addSections, updateSection, deleteSection} = require("../modules/sections");
+const {getSections, getSection, addSections, updateSection, deleteSection} = require("../controllers/sections");
 
 routes.get('/sections', getSections)
 routes.post('/sections', addSections)

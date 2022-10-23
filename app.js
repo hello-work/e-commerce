@@ -17,6 +17,11 @@ app.use('/app', sectionsRoutes)
 
 const port = 4500
 
+// add the error handling middleware
+app.use((err,req,res,next)=>{
+    return res.status(500).send({ errors: [{ message: error.message }] });
+})
+
 app.listen(port, ()=>{
     console.log(`App stared successfully on ${port}`);
     connectDB()
