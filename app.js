@@ -19,7 +19,7 @@ const port = 4500
 
 // add the error handling middleware
 app.use((err,req,res,next)=>{
-    return res.status(500).send({ errors: [{ message: error.message }] });
+    return res.status(500).send({ errors: [{ message: err.message }] });
 })
 
 app.listen(port, ()=>{
