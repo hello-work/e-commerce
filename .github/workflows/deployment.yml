@@ -1,0 +1,13 @@
+name: App deployment
+on: push
+
+jobs:
+  deploy-job:
+    runs_on: ubuntu-latest
+    steps:
+      -name: get code
+       uses: actions/checkout@v3
+      -name: install dependencies
+       run: npm ci
+      -name: mock deployment
+       run: echo deployed successfully
