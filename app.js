@@ -4,6 +4,8 @@ const app = express()
 const userRoutes = require('./routes/user')
 const productRoutes = require('./routes/product')
 const sectionsRoutes = require('./routes/sections')
+const cartRoutes = require('./routes/cart')
+
 // here is the routes for the application
 app.use('/app', userRoutes)
 app.use('/app', productRoutes)
