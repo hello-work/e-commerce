@@ -8,7 +8,7 @@ exports.getCarts = async(req,res)=>{
         let carts;
         
         if(!carts) {
-            res.status(404).send({msg:'Sorry, there are no sections !',  data:[]})
+            res.status(404).send({msg:'Sorry, there are no carts !',  data:null})
         }
 
         res.status(200).send({msg:'Successful',  data:carts})
@@ -31,7 +31,7 @@ exports.addCart = async(req,res)=>{
         let cart;
 
         if(!cart) {
-            res.status(400).send({msg:'Sections not created', data: []})    
+            res.status(400).send({msg:'carts not created', data: null})    
         }
 
         res.status(200).send({msg:'Successful',  data:cart})
@@ -52,7 +52,7 @@ exports.getCart = async(req,res)=>{
         let cart;
 
         if(!cart) {
-            res.status(404).send({msg:'Section Not Found',  data:[]})
+            res.status(404).send({msg:'cart Not Found',  data:null})
         }
 
         res.status(200).send({msg:'Successful',  data:cart})
@@ -72,7 +72,9 @@ exports.updateCart = async(req,res)=>{
     try {
         // TODO : database call
         let cart;
-
+if(!cart){
+   res.status(404).send({msg:'cart Not Found',  data:null})
+   }
         res.status(200).send({msg:'Successful',  data:cart})
         
     }catch (err) {
@@ -88,7 +90,9 @@ exports.deleteCart = async(req,res)=>{
     try {
         // TODO : database call
         let cart;
-
+if(!cart){
+   res.status(404).send({msg:'cart Not Found',  data:null})
+ }
         res.status(200).send({msg:'Successful'})
         
     }catch (err) {
