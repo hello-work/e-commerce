@@ -90,9 +90,9 @@ exports.deleteCart = async(req,res)=>{
     try {
         // TODO : database call
         let cart;
-if(!cart){
-   res.status(404).send({msg:'cart Not Found',  data:null})
- }
+          if(!cart){
+             res.status(404).send({msg:'cart Not Found',  data:null})
+           }
         res.status(200).send({msg:'Successful'})
         
     }catch (err) {
